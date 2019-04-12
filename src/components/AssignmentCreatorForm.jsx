@@ -38,6 +38,21 @@ export default function AssignmentCreatorForm({
   onDraftAssignment,
   onCloseAssignmentCreator,
 }) {
+  if (courses.isEmpty()) {
+    return (
+      <div>
+        <p>
+          {t('assignment-creator.no-courses')}
+        </p>
+        <p>
+          <a href="https://classroom.google.com">
+            {t('assignment-creator.no-course-link')}
+          </a>
+        </p>
+      </div>
+    );
+  }
+
   return (
     <form>
       <div>

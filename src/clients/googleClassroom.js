@@ -1,4 +1,5 @@
 import qs from 'qs';
+import isNil from 'lodash-es/isNil';
 
 import {AssignmentState} from '../enums';
 import {
@@ -17,6 +18,9 @@ export function createShareToClassroomUrl(snapshotKey, title) {
 export async function getCourses(pageToken) {
   const gapi = await loadAndConfigureGapi();
   const {result} = await gapi.client.classroom.courses.list({pageToken});
+  if (isNil(result.courses)) {
+    result.courses = [];
+  }
   return result;
 }
 

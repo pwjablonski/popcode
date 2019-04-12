@@ -9,7 +9,9 @@
     "date-not-valid": "Please enter a valid date",
     "past-date-not-valid": "Please pick a future date",
     "input-placeholder": "When is it due?",
-    "value-label": "{{valueLabel, formatDate}}"
+    "value-label": "{{valueLabel, formatDate}}",
+    "no-courses": "Looks like you do not have any classrooms. To create an assignment with Popcode you will need to create a Google Classroom.",
+    "no-course-link": "https://classroom.google.com"
   },
   "top-bar": {
     "create-snapshot": "Create Snapshot",
